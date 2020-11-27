@@ -1,11 +1,11 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types"
 import React, { Component } from "react"
 import "./Todo.css"
 import Checkbox from "@material-ui/core/Checkbox"
 import IconButton from "@material-ui/core/IconButton"
 import DeleteIcon from "@material-ui/icons/Delete"
 
-class Todo extends Component {
+export class Todo extends Component {
   constructor({ done, index, markDone, todo, removeTodo }) {
     super({ done, index, markDone, todo, removeTodo })
     this.state = {
@@ -57,4 +57,12 @@ class Todo extends Component {
   }
 }
 
-export default Todo
+Todo.propTypes = {
+  done: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  ),
+  index: PropTypes.number.isRequired,
+  todo: PropTypes.string.isRequired,
+  markDone: PropTypes.element.isRequired,
+  removeTodo: PropTypes.element.isRequired,
+}

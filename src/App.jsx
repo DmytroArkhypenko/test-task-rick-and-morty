@@ -1,4 +1,5 @@
 import React from "react"
+
 import "./App.css"
 import { Route, NavLink, Switch } from "react-router-dom"
 import { Characters } from "./components/Characters/Characters"

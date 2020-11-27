@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types"
 import React, { useState } from "react"
 import Modal from "@material-ui/core/Modal"
 import { makeStyles } from "@material-ui/core/styles"
@@ -77,4 +77,18 @@ export const Character = ({ char }) => {
       </Modal>
     </>
   )
+}
+
+Character.propTypes = {
+  char: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    image: PropTypes.element.isRequired,
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    location: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+  }),
 }

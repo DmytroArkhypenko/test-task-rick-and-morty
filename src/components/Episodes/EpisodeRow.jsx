@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types"
 import React from "react"
 import Modal from "@material-ui/core/Modal"
 import TableRow from "@material-ui/core/TableRow"
@@ -68,4 +68,13 @@ export const EpisodeRow = ({ episode }) => {
       </Modal>
     </>
   )
+}
+
+EpisodeRow.propTypes = {
+  episode: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    air_date: PropTypes.string.isRequired,
+    episode: PropTypes.string.isRequired,
+  }),
 }
