@@ -1,0 +1,12 @@
+.filters {
+  margin: 50px;
+  display: flex;
+}
+
+.filters__item {
+  margin: 20px;
+}
+
+.pagination {
+  margin: auto;
+}

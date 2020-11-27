@@ -1,0 +1,14 @@
+.filters {
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-list {
+  margin: auto;
+}
