@@ -1,5 +1,4 @@
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable import/prefer-default-export */
 import React, { Component } from "react"
 import TextField from "@material-ui/core/TextField"
 import IconButton from "@material-ui/core/IconButton"

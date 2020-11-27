@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable import/prefer-default-export */
 import React, { useState, useEffect, useCallback } from "react"
 import Pagination from "@material-ui/lab/Pagination"
 import GridList from "@material-ui/core/GridList"

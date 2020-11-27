@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/prop-types */
-/* eslint-disable import/prefer-default-export */
 import React, { useState } from "react"
 import Modal from "@material-ui/core/Modal"
 import { makeStyles } from "@material-ui/core/styles"
@@ -52,14 +50,12 @@ export const Character = ({ char }) => {
   return (
     <>
       <div className="grid-list">
-        <GridListTile key={char.image} className={classes.root}>
-          <img
-            src={char.image}
-            onClick={handleOpen}
-            onKeyDown={handleOpen}
-            alt={char.name}
-            title={char.name}
-          />
+        <GridListTile
+          key={char.image}
+          className={classes.root}
+          onClick={handleOpen}
+        >
+          <img src={char.image} alt={char.name} title={char.name} />
           <GridListTileBar title={char.name} />
         </GridListTile>
       </div>

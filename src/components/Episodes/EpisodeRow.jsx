@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable import/prefer-default-export */
 import React from "react"
 import Modal from "@material-ui/core/Modal"
 import TableRow from "@material-ui/core/TableRow"

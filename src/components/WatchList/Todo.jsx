@@ -1,56 +1,60 @@
-import React, { Component } from "react";
-import "./Todo.css";
-import Checkbox from "@material-ui/core/Checkbox";
-import IconButton from "@material-ui/core/IconButton";
-import DeleteIcon from "@material-ui/icons/Delete";
+/* eslint-disable react/prop-types */
+import React, { Component } from "react"
+import "./Todo.css"
+import Checkbox from "@material-ui/core/Checkbox"
+import IconButton from "@material-ui/core/IconButton"
+import DeleteIcon from "@material-ui/icons/Delete"
 
 class Todo extends Component {
-  constructor(props) {
-    super(props);
+  constructor({ done, index, markDone, todo, removeTodo }) {
+    super({ done, index, markDone, todo, removeTodo })
     this.state = {
       hover: false,
-    };
+    }
   }
 
   showBin = () => {
-    this.setState({ hover: true });
-  };
+    this.setState({ hover: true })
+  }
 
   hideBin = () => {
-    this.setState({ hover: false });
-  };
+    this.setState({ hover: false })
+  }
 
   render() {
+    const { done, index, markDone, todo, removeTodo } = this.props
+    const { hover } = this.state
     return (
       <div>
         <p
           onMouseLeave={this.hideBin}
           onMouseEnter={this.showBin}
-          className={this.props.done ? "finished" : null}
+          className={done ? "finished" : null}
         >
-          <span className='text-color'>
+          <span className="text-color">
             <Checkbox
               title="Mark Done"
-              onClick={() => this.props.markDone(this.props.index)}
-              checked={this.props.done}
+              onClick={() => markDone(index)}
+              checked={done}
               color="primary"
             />
-            {this.props.todo}
+            {todo}
           </span>
-          {this.state.hover && (
+          {hover && (
             <IconButton
               title="Remove Todo"
               color="secondary"
-              onClick={() => this.props.removeTodo(this.props.index)}
-              aria-label="delete">
+              onClick={() => removeTodo(index)}
+              aria-label="delete"
+            >
               <DeleteIcon />
             </IconButton>
           )}
         </p>
         <hr />
       </div>
-    );
+    )
   }
 }
 
-export default Todo;
+export default Todo

@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import React, { useState, useEffect, useCallback } from "react"
 import Pagination from "@material-ui/lab/Pagination"
 import Select from "@material-ui/core/Select"
