@@ -75,7 +75,6 @@ export const Episodes = () => {
     setQuery({
       'name': value
     });
-    console.log(query);
     getEpisode(query).then(result => {
       setEpisodes(result.results);
       setInfo(result.info);

@@ -47,7 +47,6 @@ export const Characters = () => {
       'gender': genderString
     }
     setQuery(query)
-    console.log(query);
     getCharacter(query).then(result => {
       setCharacters(result.results);
       setInfo(result.info);

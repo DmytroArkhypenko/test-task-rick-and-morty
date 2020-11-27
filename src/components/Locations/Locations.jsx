@@ -92,7 +92,6 @@ export const Locations = () => {
         'type': typeString
       }
       setQuery(query)
-      console.log(query);
       getLocation(query).then(result => {
         setLocations(result.results);
         setInfo(result.info);
