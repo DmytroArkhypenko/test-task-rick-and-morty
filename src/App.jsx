@@ -4,6 +4,7 @@ import {
   Route,
   NavLink,
   Switch,
+  Redirect
 } from 'react-router-dom';
 import { Characters } from './components/Characters/Characters';
 import { Episodes } from './components/Episodes/Episodes';
@@ -13,7 +14,7 @@ import { WatchList } from './components/WatchList/WatchList';
 const App = () => (
   <div className="App">
     <nav className="menu">
-      <NavLink to="/characters" className="normal" activeClassName="active" exact>Characters</NavLink>
+      <NavLink to="/" className="normal" activeClassName="active" exact>Characters</NavLink>
       <NavLink to="/episodes" className="normal" activeClassName="active" exact>Episodes</NavLink>
       <NavLink to="/locations" className="normal" activeClassName="active" exact>Locations</NavLink>
       <NavLink to="/watch-list" className="normal" activeClassName="active" exact>Watch List</NavLink>

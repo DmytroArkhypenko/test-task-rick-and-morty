@@ -8,6 +8,10 @@ import { getCharacter } from '../../api/index';
 import { Character } from "./Character";
 import './Characters.css'
 
+const SPECIES_LIST = ['unknown', 'human', 'alien', 'humanoid', 'animal', 'Robot', 'Cronenberg', 'Poopybutthole', 'Metholog', 'Vampire'];
+const STATUS_LIST = ['alive', 'dead', 'unknown'];
+const GENDER_LIST = ['male', 'female', 'genderless', 'unknown'];
+
 export const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({})
@@ -15,10 +19,6 @@ export const Characters = () => {
   const [status, setStatus] = useState('All');
   const [gender, setGender] = useState('All');
   const [query, setQuery] = useState('');
-
-  const speciesList = ['unknown', 'human', 'alien', 'humanoid', 'animal', 'Robot', 'Cronenberg', 'Poopybutthole', 'Metholog', 'Vampire'];
-  const statusList = ['alive', 'dead', 'unknown'];
-  const genderList = ['male', 'female', 'genderless', 'unknown'];
 
   useEffect(() => {
     getCharacter().then(result => {
@@ -91,7 +91,7 @@ export const Characters = () => {
           >
             ALL
           </option>
-          {speciesList.map(curSpecies => (
+          {SPECIES_LIST.map(curSpecies => (
           <option
             value={curSpecies}
             key={curSpecies}
@@ -116,7 +116,7 @@ export const Characters = () => {
           >
             ALL
           </option>
-          {statusList.map(curStatus => (
+          {STATUS_LIST.map(curStatus => (
           <option
             value={curStatus}
             key={curStatus}
@@ -141,7 +141,7 @@ export const Characters = () => {
           >
             ALL
           </option>
-          {genderList.map(curGender => (
+          {GENDER_LIST.map(curGender => (
             <option
               value={curGender}
               key={curGender}

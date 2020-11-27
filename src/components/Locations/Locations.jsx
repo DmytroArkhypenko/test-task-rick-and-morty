@@ -61,6 +61,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const DIMENSIONS = ["unknown", "Dimension C-137", "Post-Apocalyptic Dimension", "Replacement Dimension", "Cronenberg Dimension", "Fantasy Dimension", "Dimension 5-126"];
+const TYPES = ["Planet", "Cluster", "Space station", "Microverse", "TV", "Resort", "Fantasy town", "Dream"];
 
 export const Locations = () => {
   const classes = useStyles();
@@ -70,9 +72,6 @@ export const Locations = () => {
   const [name, setName] = useState('');
   const [type, setType] = useState('All');
   const [dimension, setDimension] = useState('All');
-
-  const dimensions = ["unknown", "Dimension C-137", "Post-Apocalyptic Dimension", "Replacement Dimension", "Cronenberg Dimension", "Fantasy Dimension", "Dimension 5-126"];
-  const types = ["Planet", "Cluster", "Space station", "Microverse", "TV", "Resort", "Fantasy town", "Dream"];
 
   useEffect(() => {
     getLocation().then(result => {
@@ -152,7 +151,7 @@ export const Locations = () => {
             >
               ALL
             </option>
-            {types.map(curType => (
+            {TYPES.map(curType => (
             <option
               value={curType}
               key={curType}
@@ -176,7 +175,7 @@ export const Locations = () => {
             >
               ALL
             </option>
-            {dimensions.map(curDimension => (
+            {DIMENSIONS.map(curDimension => (
               <option
                 value={curDimension}
                 key={curDimension}
