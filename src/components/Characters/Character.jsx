@@ -67,12 +67,22 @@ export const Character = ({ char }) => {
       >
         <div style={modalStyle} className={classes.paper}>
           <h2>{char.name}</h2>
-          <img src={char.image} alt="NoPic" /> <br />
-          <b>Id</b>: {char.id} <br />
-          <b>Status</b>: {char.status} <br />
-          <b>Species</b>: {char.species} <br />
-          <b>Gender</b>: {char.gender} <br />
-          <b>Location</b>: {char.location.name} <br />
+          <img src={char.image} alt="NoPic" />
+          <p>
+            <b>Id</b>: {char.id}
+          </p>
+          <p>
+            <b>Status</b>: {char.status}
+          </p>
+          <p>
+            <b>Species</b>: {char.species}
+          </p>
+          <p>
+            <b>Gender</b>: {char.gender}
+          </p>
+          <p>
+            <b>Location</b>: {char.location.name}
+          </p>
         </div>
       </Modal>
     </>

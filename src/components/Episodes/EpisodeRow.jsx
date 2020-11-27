@@ -60,9 +60,13 @@ export const EpisodeRow = ({ episode }) => {
         <div style={modalStyle} className={classes.paper}>
           <h2>{episode.name}</h2>
           <p>
-            <b>Id</b>: {episode.id} <br />
-            <b>Air date</b>: {episode.air_date} <br />
-            <b>Episode</b>: {episode.episode} <br />
+            <b>Id</b>: {episode.id}
+          </p>
+          <p>
+            <b>Air date</b>: {episode.air_date}
+          </p>
+          <p>
+            <b>Episode</b>: {episode.episode}
           </p>
         </div>
       </Modal>
